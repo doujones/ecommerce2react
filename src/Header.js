@@ -9,18 +9,18 @@ import { auth } from "./firebase";
 function Header() {
   const [{ basket, user }, dispatch] = useStateValue();
 
-  const handleAuthenticaton = () => {
-    if (user) {
-      auth.signOut();
-    }
-  }
+  // const handleAuthenticaton = () => {
+  //   if (user) {
+  //     auth.signOut();
+  //   }
+  // }
 
   return (
     <div className="header">
       <Link to="/">
         <img
           className="header__logo"
-          src="http://digimallinc.com/wp-content/uploads/2018/08/kisspng-logo-e-commerce-electronic-business-ecommerce-5aca8122d1aa46.0475120015232207708588.png"
+          src="https://tse3.mm.bing.net/th?id=OIP.ot-h7ezoa4IE5D-H5CnQxwAAAA&pid=Api&P=0&w=300&h=300"
         />
       </Link>
 
@@ -30,12 +30,12 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <Link to={!user && '/login'}>
+        {/* <Link to={!user && '/login'}>
           <div onClick={handleAuthenticaton} className="header__option">
             <span className="header__optionLineOne">Hello {!user ? 'Guest' : user.email}</span>
             <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
           </div>
-        </Link>
+        </Link> */}
 
         <Link to='/orders'>
           <div className="header__option">
@@ -43,13 +43,7 @@ function Header() {
             <span className="header__optionLineTwo">& Orders</span>
           </div>
         </Link>
-        
-
-        <div className="header__option">
-          <span className="header__optionLineOne">Your</span>
-          <span className="header__optionLineTwo">Prime</span>
-        </div>
-
+       
         <Link to="/checkout">
           <div className="header__optionBasket">
             <ShoppingBasketIcon />

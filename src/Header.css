@@ -6,13 +6,15 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 
 .header__logo {
   width: 100px;
+  height: 40px;
   object-fit: contain;
   margin: 0 20px;
-  margin-top: 18px;
+  margin-top: 9px;
 }
 
 .header__search {
